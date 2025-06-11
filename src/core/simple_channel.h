@@ -13,6 +13,9 @@
 
 namespace fastipc {
 
+// SimpleChanel is a basic implementation of IChannel that allows sending and
+// receiving data in a straightforward manner. It uses an internal buffer to
+// store data sent through the channel and allows retrieval of that data.
 class SimpleChanel : public IChannel {
  public:
   explicit SimpleChanel(const std::string& name);
@@ -31,7 +34,12 @@ class SimpleChanel : public IChannel {
   const std::string& Name() const override;
 
  private:
+  // Name of the channel
   std::string name_;
+
+  // Internal buffer to hold data sent through the channel
+  // This buffer is used to store the data sent via Send() and is read by
+  // Receive().
   std::vector<char> buffer_;
 };
 
