@@ -1,0 +1,29 @@
+{
+  "FastIPC Header with Include Guard": {
+    "scope": "cpp",
+    "prefix": "hdr",
+    "body": [
+      "// Copyright (c) ${CURRENT_YEAR} Boss",
+      "// Distributed under the MIT License.",
+      "// See LICENSE file in the project root for full license information.",
+      "",
+      "#ifndef FASTIPC_${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+      "#define FASTIPC_${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H",
+      "",
+      "",
+      "#endif // FASTIPC_${TM_FILENAME_BASE/(.*)/${1:/upcase}/}_H"
+    ],
+    "description": "Create a FastIPC-style header file with include guard"
+  },
+  "FastIPC Copyright":
+  {
+    "scope": "cpp",
+    "prefix": "cpr",
+    "body": [
+      "// Copyright (c) ${CURRENT_YEAR} Boss",
+      "// Distributed under the MIT License.",
+      "// See LICENSE file in the project root for full license information.",
+    ],
+    "description": "Insert a FastIPC copyright header"
+  }
+}
