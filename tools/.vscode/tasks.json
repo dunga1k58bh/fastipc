@@ -7,6 +7,22 @@
 			"command": "configure",
 			"problemMatcher": [],
 			"detail": "CMake template configure task"
+		},
+		{
+			"label": "Run core_unittest.exe",
+			"type": "shell",
+			"command": "${workspaceFolder}/build/bin/core_unittest.exe",
+			"group": {
+				"kind": "test",
+				"isDefault": true
+			},
+			"presentation": {
+				"echo": true,
+				"reveal": "always",
+				"focus": false,
+				"panel": "shared"
+			},
+			"problemMatcher": []
 		}
 	]
 }

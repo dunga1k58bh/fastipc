@@ -8,6 +8,7 @@ FetchContent_MakeAvailable(googletest)
 
 # Test executable
 add_executable(core_unittest
+  core/shared_memory_unittest.cc
   core/simple_channel_unittest.cc
   # Add other test files here as needed
 )

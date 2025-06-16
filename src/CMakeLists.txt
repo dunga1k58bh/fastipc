@@ -1,5 +1,6 @@
 add_library(fastipc STATIC
   core/simple_channel.cc
+  core/shared_memory.cc
   # any other implementation files
 )
 
